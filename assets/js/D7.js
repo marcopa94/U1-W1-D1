@@ -2,16 +2,15 @@
   Scrivi una funzione per concatenare due stringhe ricevute come parametri, selezionando solamente i primi 2 caratteri della
   prima e gli ultimi 3 della seconda. Converti la stringa risultante in maiuscolo e mostrala con un console.log().
 */
-/*function totale(stri1, stri2) {
-  const rsult = stri1 + " " + stri2;
-  console.log(rsult);
-totale("il", "blasco");
-}*/
+function totale(stri1, stri2) {
+  const parola1 = stri1.substring(0, 2);
+  const parola2 = stri2.substring(stri2.length - 3);
+  const parolafinale = parola1 + parola2;
 
-const stringhe = (str1, str2) => str1 + str2;
-const tot = stringhe("vasco", "rossi");
-
-console.log(tot);
+  return parolafinale;
+}
+const contenitore = totale("Vasco", "Rossi");
+console.log(contenitore);
 
 /*tot.forEach(caratteri => {
   primi.push(caratteri.charAt(0).toUpperCase());
@@ -24,7 +23,7 @@ function newArray() {
   const array = [];
 
   for (let i = 0; i < 10; i++) {
-    const valori = Math.floor(Math.random() * 100);
+    const valori = Math.floor(Math.random() * 101);
     array.push(valori);
   }
   return array;
@@ -41,19 +40,16 @@ const evens = numeri.filter((numeri) => numeri % 2 === 0);
 console.log(evens);
 
 /* ESERCIZIO 4 (forEach)
-  Scrivi una funzione per sommare i numeri contenuti in un array
-*/
+  Scrivi una funzione per sommare i numeri contenuti in un array*/
 /*const numeri1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-const tot3 = 0;
-numeri1.forEach((num) => num + num);
-tot3.p;
 
-console.log(numeri1());
+numeri1.forEach((num) => num + num);
 
 /* ESERCIZIO 5 (reduce)
   Scrivi una funzione per sommare i numeri contenuti in un array
-*/
-const numeri2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+
+  const numeri2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 const total = numeri2.reduce((num1, num2) => {
   return num1 + num2;
 });
@@ -63,7 +59,7 @@ console.log("totale", total);
 /* ESERCIZIO 6 (map)
   Scrivi una funzione che, dato un array di soli numeri e un numero n come parametri, ritorni un secondo array con tutti i valori del precedente incrementati di n
 */
-const numeri3 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+/*const numeri3 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 const numbersMapped = numeri3.map((num, n) => num + n);
 
 console.log("prova" + numbersMapped);
@@ -72,13 +68,28 @@ console.log("prova" + numbersMapped);
   Scrivi una funzione che, dato un array di stringhe, ritorni un nuovo array contenente le lunghezze delle rispettive stringhe dell'array di partenza
   es.: ["EPICODE", "is", "great"] => [7, 2, 5]
 */
-const fruits = ["banana", "mela", "kiwi", "papaya", "mango", "pompelmo"];
+/*const fruits = ["banana", "mela", "kiwi", "papaya", "mango", "pompelmo"];
+const fruitsclone = fruits.map((fruit) => fruit.split());
 
 /* ESERCIZIO 8 (forEach o for)
   Scrivi una funzione per creare un array contenente tutti i valori DISPARI da 1 a 99.
 */
 
-/* Questo array di film verrà usato negli esercizi a seguire. Non modificarlo e scorri oltre per riprendere gli esercizi :) */
+/*const array3 = [];
+  
+  for (let i = 1; i <= 99; i++) {
+     const valore = i;
+ const dispari = valore.forEach((numeri) => numeri % 2 !== 0){
+
+  } 
+  
+  
+ 
+}
+
+console.log(newArray());
+
+/* Questo arra)y di film verrà usato negli esercizi a seguire. Non modificarlo e scorri oltre per riprendere gli esercizi :) */
 const movies = [
   {
     Title: "The Lord of the Rings: The Fellowship of the Ring",
