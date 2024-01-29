@@ -10,7 +10,7 @@ function totale(stri1, stri2) {
   return parolafinale;
 }
 const contenitore = totale("Vasco", "Rossi");
-console.log(contenitore);
+console.log("es 1", contenitore);
 
 /*tot.forEach(caratteri => {
   primi.push(caratteri.charAt(0).toUpperCase());
@@ -29,45 +29,49 @@ function newArray() {
   return array;
 }
 
-console.log(newArray());
+console.log("es2 ", newArray());
 
 /* ESERCIZIO 3 (filter)
   Scrivi una funzione per ricavare solamente i valori PARI da un array composto da soli valori numerici
 */
+
 const numeri = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 const evens = numeri.filter((numeri) => numeri % 2 === 0);
-console.log(evens);
+console.log("es3", evens);
 
 /* ESERCIZIO 4 (forEach)
   Scrivi una funzione per sommare i numeri contenuti in un array*/
-/*const numeri1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const numeri1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 numeri1.forEach((num) => num + num);
 
 /* ESERCIZIO 5 (reduce)
   Scrivi una funzione per sommare i numeri contenuti in un array
+*/
+const numeri2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
+const sum2 = numeri2.reduce((n, m) => n + m);
 
-  const numeri2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-const total = numeri2.reduce((num1, num2) => {
-  return num1 + num2;
-});
-
-console.log("totale", total);
+console.log("esercizio5 somma", sum2);
 
 /* ESERCIZIO 6 (map)
   Scrivi una funzione che, dato un array di soli numeri e un numero n come parametri, ritorni un secondo array con tutti i valori del precedente incrementati di n
 */
-/*const numeri3 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-const numbersMapped = numeri3.map((num, n) => num + n);
-
-console.log("prova" + numbersMapped);
+const numeri3 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const numbersMapped = function (n) {
+  return numeri3.map((num) => num * n);
+};
+console.log("es6", numbersMapped(3));
 
 /* ESERCIZIO 7 (map)
   Scrivi una funzione che, dato un array di stringhe, ritorni un nuovo array contenente le lunghezze delle rispettive stringhe dell'array di partenza
   es.: ["EPICODE", "is", "great"] => [7, 2, 5]
 */
+const str = ["Benvenuto", "in", "EPICODE"];
+let divisione = str.map((parola) => parola.length);
+console.log("es.7", divisione);
+
 /*const fruits = ["banana", "mela", "kiwi", "papaya", "mango", "pompelmo"];
 const fruitsclone = fruits.map((fruit) => fruit.split());
 
